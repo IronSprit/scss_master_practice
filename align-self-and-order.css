@@ -1,0 +1,30 @@
+.father {
+  display: flex;
+
+  /* Main Axis */
+  justify-content: space-around;
+  /* Cross Axis */
+  /* align-items: center; */
+
+  height: 100vh;
+  font-size: 50px;
+}
+
+.child {
+  background-color: tomato;
+  width: 200px;
+  height: 200px;
+  color: black;
+}
+
+.child:nth-child(2) {
+  align-self: center;
+
+  /* 기본은 0 이고, 여기서 2가 1로 밀리면. 0 
+    layer 밖으로 가기 때문에 2가 마지막으로 간다.*/
+  order: 1;
+}
+
+.child:nth-child(3) {
+  align-self: flex-end;
+}

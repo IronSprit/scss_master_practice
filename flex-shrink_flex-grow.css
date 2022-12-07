@@ -13,31 +13,40 @@ body {
   /* Cross Axis */
   /* align-items: center; */
 
-  height: 50vh;
-  width: 100%;
+  height: 100vh;
 
   /* box size를 유지해라. Default : nowrap*/
   /* flex-wrap: wrap; */
 }
 
 .child {
-  /* element에 초기값을 설정한다. Main Axis 방향으로 값이 적용된다.*/
-  flex-basis: 300px;
-
   background-color: tomato;
+  width: 200px;
+  height: 200px;
   color: white;
   font-size: 50px;
 
   display: flex;
   justify-content: center;
-  align-items: center;
   /* align-items: center; */
 }
 
 .child:nth-child(2) {
   background-color: black;
+
+  /* 줄어들 때 적용 됨. 기본은 1배. 사이즈 조절이 필요한 경우 수치만큼 더 줄어든다.*/
+  /* flex-shrink: 2; */
+
+  /* 기본값 0, 늘어날 때 적용 됨. */
+  flex-grow: 1;
 }
 
 .child:nth-child(3) {
   background-color: green;
+
+  /* 줄어들 때 적용 됨. 기본은 1배. 사이즈 조절이 필요한 경우 수치만큼 더 줄어든다.*/
+  /* flex-shrink: 2; */
+
+  /* 기본값 0, 늘어날 때 적용 됨. */
+  flex-grow: 2;
 }

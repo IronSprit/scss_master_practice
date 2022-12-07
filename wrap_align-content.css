@@ -13,31 +13,21 @@ body {
   /* Cross Axis */
   /* align-items: center; */
 
-  height: 50vh;
-  width: 100%;
+  height: 100vh;
 
-  /* box size를 유지해라. Default : nowrap*/
-  /* flex-wrap: wrap; */
+  /* box size를 유지해라. 
+  Default : nowrap -> 화면 크기에 따라 객체의 공간이 모자를 경우 사이즈를 변경함*/
+  flex-wrap: wrap;
 }
 
 .child {
-  /* element에 초기값을 설정한다. Main Axis 방향으로 값이 적용된다.*/
-  flex-basis: 300px;
-
   background-color: tomato;
+  width: 100px;
+  height: 100px;
   color: white;
   font-size: 50px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  /* align-items: center; */
-}
-
-.child:nth-child(2) {
-  background-color: black;
-}
-
-.child:nth-child(3) {
-  background-color: green;
 }
