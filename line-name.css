@@ -1,0 +1,44 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.grid {
+  display: grid;
+
+  /* grid-template-columns: 200px 200px 200px 200px;
+      grid-template-rows: 300px 300px 300px 300px; */
+  grid-template-columns: [first-line] 100px [secend-line] 100px [third-line] 100px [fourth-line] 100px [fifth-line];
+  grid-template-rows: 100px repeat(4, 200px) 100px;
+}
+
+.header {
+  background-color: rgb(255, 99, 71);
+  /* 단축 */
+  grid-column: [first-line] / [fifth-line];
+  /* 시작과 끝만 적는 방식.*/
+  grid-column: 1 / -1;
+}
+
+.content {
+  background-color: rgb(0, 153, 255);
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+}
+
+.nav {
+  background-color: rgb(172, 71, 255);
+  grid-column: 4 / 5;
+  /* 시작점과 얼마나 공간을 차지하는지 */
+  grid-row: 2 / span 2;
+}
+
+.footer {
+  background-color: rgb(255, 212, 71);
+  grid-column: 1 / 5;
+
+  /* 이렇게 쓸 수도 있다. 위에서는 4개 선언했지만 아래서 3개 선언해서 3개 결과 나옴. */
+  grid-column: span 3;
+  /* 시작점을 적는다. */
+  grid-column: 1 / span 3;
+}

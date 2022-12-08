@@ -1,0 +1,57 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.grid-fr-example {
+  display: grid;
+  gap: 10px;
+  /* 1fr : grid 영역이 선언 된 만큼 가진다. */
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: 1fr 2fr 1fr 1fr; */
+
+  /* row는 얼마나 사용할 지 모르기 때문에 크기를 먼저 선언 해 줘야 한다. */
+  height: 50vh;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+
+  /* row는 얼마나 사용할 지 모르기 때문에 크기를 먼저 선언 해 줘야 한다. */
+  height: 50vh;
+
+  /* *** grid-template 에서는 repeat 사용 못함 *** */
+  /* row / col */
+  grid-template:
+    "header header header header" 1fr
+    "content content content nav" 2fr
+    "footer footer footer footer" 1fr / 1fr 3fr 1fr 1fr;
+
+  /* line Name 적용 */
+  grid-template:
+    [herder-start] "header header header header" 1fr [header-end]
+    [content-start] "content content content nav" 2fr [content-end]
+    [footer-start] "footer footer footer footer" 1fr [footer-end]/ 1fr 3fr 1fr 1fr;
+}
+
+.header {
+  background-color: rgb(255, 99, 71);
+  grid-area: header;
+}
+
+.content {
+  background-color: rgb(0, 153, 255);
+  grid-area: content;
+}
+
+.nav {
+  background-color: rgb(172, 71, 255);
+  grid-area: nav;
+}
+
+.footer {
+  background-color: rgb(255, 212, 71);
+  grid-area: footer;
+}
