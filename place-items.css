@@ -18,6 +18,7 @@ body {
   /* cross Axis로 item을 어떻게 할건지 -> 영역에 맞게 설정 됨 */
   /* align-items: stretch; */
 
+  /* **** item은 한개의 cell을 의미한다. 즉 객체 안의 내용에 영향을 준다.**** */
   /* 좌측으로 붙을거고 */
   justify-items: start;
   /* 아래로 붙을거다. */
